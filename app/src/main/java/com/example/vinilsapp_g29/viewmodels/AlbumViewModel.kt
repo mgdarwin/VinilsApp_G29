@@ -3,11 +3,9 @@ package com.example.vinilsapp_g29.viewmodels
 import android.app.Application
 import androidx.lifecycle.*
 import com.example.vinilsapp_g29.models.Album
-
 import com.example.vinilsapp_g29.network.NetworkServiceAdapter
 import com.example.vinilsapp_g29.repositories.AlbumRepository
 import com.example.vinilsapp_g29.repositories.CollectorsRepository
-
 
 class AlbumViewModel(application: Application) :  AndroidViewModel(application) {
 

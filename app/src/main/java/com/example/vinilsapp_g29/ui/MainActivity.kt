@@ -1,8 +1,6 @@
 package com.example.vinilsapp_g29.ui
 
 import android.os.Bundle
-
-mport android.os.Bundle
 import android.util.Log
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity

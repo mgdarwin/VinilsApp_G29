@@ -12,7 +12,6 @@ import com.android.volley.toolbox.Volley
 import com.example.vinilsapp_g29.models.Album
 import com.example.vinilsapp_g29.models.Collector
 import com.example.vinilsapp_g29.models.Comment
-import com.example.vinilsapp_g29.models.Track
 import org.json.JSONArray
 import org.json.JSONObject
 

@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>    <!-- En esta sección usted definirá las expresiones y las propiedades que utilizará en su layout, y puede asociarlas con los ViewModels que creó anteriormente -->
+    <data>
         <variable name="album" type="com.example.vinilsapp_g29.models.Album"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
@@ -39,6 +39,5 @@
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
