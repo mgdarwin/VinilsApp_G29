@@ -1,4 +1,7 @@
 package com.example.vinilsapp_g29.models
 
-class Comment {
-}
+data class Comment (
+    val description:String,
+    val rating:String,
+    val albumId:Int
+)

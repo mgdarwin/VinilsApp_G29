@@ -1,9 +1,9 @@
-package com.example.vinyls_jetpack_application.repositories
+package com.example.vinilsapp_g29.repositories
 
 import android.app.Application
 import com.android.volley.VolleyError
-import com.example.vinyls_jetpack_application.models.Album
-import com.example.vinyls_jetpack_application.network.NetworkServiceAdapter
+import com.example.vinilsapp_g29.models.Album
+import com.example.vinilsapp_g29.network.NetworkServiceAdapter
 
 class AlbumRepository (val application: Application){
     fun refreshData(callback: (List<Album>)->Unit, onError: (VolleyError)->Unit) {

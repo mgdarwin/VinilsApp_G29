@@ -1,4 +1,4 @@
-package com.example.vinyls_jetpack_application.ui
+package com.example.vinilsapp_g29.ui
 
 import android.os.Bundle
 import android.util.Log
@@ -13,11 +13,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vinyls_jetpack_application.R
-import com.example.vinyls_jetpack_application.databinding.CommentFragmentBinding
-import com.example.vinyls_jetpack_application.models.Comment
-import com.example.vinyls_jetpack_application.ui.adapters.CommentsAdapter
-import com.example.vinyls_jetpack_application.viewmodels.CommentViewModel
+import com.example.vinilsapp_g29.R
+import com.example.vinilsapp_g29.databinding.CommentFragmentBinding
+import com.example.vinilsapp_g29.models.Comment
+import com.example.vinilsapp_g29.ui.adapters.CommentsAdapter
+import com.example.vinilsapp_g29.viewmodels.CommentViewModel
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.

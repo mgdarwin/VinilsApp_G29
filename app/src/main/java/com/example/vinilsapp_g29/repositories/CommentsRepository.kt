@@ -1,9 +1,9 @@
-package com.example.vinyls_jetpack_application.repositories
+package com.example.vinilsapp_g29.repositories
 
 import android.app.Application
 import com.android.volley.VolleyError
-import com.example.vinyls_jetpack_application.models.Comment
-import com.example.vinyls_jetpack_application.network.NetworkServiceAdapter
+import com.example.vinilsapp_g29.models.Comment
+import com.example.vinilsapp_g29.network.NetworkServiceAdapter
 
 class CommentsRepository (val application: Application){
     fun refreshData(albumId: Int, callback: (List<Comment>)->Unit, onError: (VolleyError)->Unit) {

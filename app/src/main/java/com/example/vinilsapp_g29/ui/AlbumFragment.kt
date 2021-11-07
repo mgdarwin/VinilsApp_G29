@@ -1,4 +1,4 @@
-package com.example.vinyls_jetpack_application.ui
+package com.example.vinilsapp_g29.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,11 +10,11 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vinyls_jetpack_application.R
-import com.example.vinyls_jetpack_application.databinding.AlbumFragmentBinding
-import com.example.vinyls_jetpack_application.models.Album
-import com.example.vinyls_jetpack_application.ui.adapters.AlbumsAdapter
-import com.example.vinyls_jetpack_application.viewmodels.AlbumViewModel
+import com.example.vinilsapp_g29.R
+import com.example.vinilsapp_g29.databinding.AlbumFragmentBinding
+import com.example.vinilsapp_g29.models.Album
+import com.example.vinilsapp_g29.ui.adapters.AlbumsAdapter
+import com.example.vinilsapp_g29.viewmodels.AlbumViewModel
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.

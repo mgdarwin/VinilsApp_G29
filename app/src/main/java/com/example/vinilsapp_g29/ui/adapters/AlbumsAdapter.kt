@@ -1,4 +1,4 @@
-package com.example.vinyls_jetpack_application.ui.adapters
+package com.example.vinilsapp_g29.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,10 +6,10 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vinyls_jetpack_application.R
-import com.example.vinyls_jetpack_application.databinding.AlbumItemBinding
-import com.example.vinyls_jetpack_application.models.Album
-import com.example.vinyls_jetpack_application.ui.AlbumFragmentDirections
+import com.example.vinilsapp_g29.R
+import com.example.vinilsapp_g29.databinding.AlbumItemBinding
+import com.example.vinilsapp_g29.models.Album
+import com.example.vinilsapp_g29.ui.AlbumFragmentDirections
 
 class AlbumsAdapter : RecyclerView.Adapter<AlbumsAdapter.AlbumViewHolder>(){
 

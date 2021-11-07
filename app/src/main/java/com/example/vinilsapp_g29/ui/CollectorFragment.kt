@@ -1,4 +1,4 @@
-package com.example.vinyls_jetpack_application.ui
+package com.example.vinilsapp_g29.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,11 +10,11 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vinyls_jetpack_application.R
-import com.example.vinyls_jetpack_application.databinding.CollectorFragmentBinding
-import com.example.vinyls_jetpack_application.models.Collector
-import com.example.vinyls_jetpack_application.ui.adapters.CollectorsAdapter
-import com.example.vinyls_jetpack_application.viewmodels.CollectorViewModel
+import com.example.vinilsapp_g29.R
+import com.example.vinilsapp_g29.databinding.CollectorFragmentBinding
+import com.example.vinilsapp_g29.models.Collector
+import com.example.vinilsapp_g29.ui.adapters.CollectorsAdapter
+import com.example.vinilsapp_g29.viewmodels.CollectorViewModel
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
