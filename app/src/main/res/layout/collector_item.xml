@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable name="collector" type="com.example.vinilsapp_g29.models.Collector"/>
+        <variable name="collector" type="com.example.vinyls_jetpack_application.models.Collector"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

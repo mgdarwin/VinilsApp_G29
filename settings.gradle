@@ -6,5 +6,5 @@ dependencyResolutionManagement {
         jcenter() // Warning: this repository is going to shut down soon
     }
 }
-rootProject.name = "VinilsApp_G29"
+rootProject.name = "Vinyls_Jetpack_Application"
 include ':app'
