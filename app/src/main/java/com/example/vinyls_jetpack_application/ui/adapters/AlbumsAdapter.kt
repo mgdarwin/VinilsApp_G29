@@ -30,6 +30,8 @@ class AlbumsAdapter : RecyclerView.Adapter<AlbumsAdapter.AlbumViewHolder>(){
             AlbumViewHolder.LAYOUT,
             parent,
             false)
+
+        mContext = parent.context
         return AlbumViewHolder(withDataBinding)
     }
 
@@ -45,13 +47,16 @@ class AlbumsAdapter : RecyclerView.Adapter<AlbumsAdapter.AlbumViewHolder>(){
             println(action)
         }
 
-        /**
-        Glide.with(mContext)
-            .load(album.cover)
-            .diskCacheStrategy(DiskCacheStrategy.ALL)
-            .centerCrop()
-            .into(holder.viewDataBinding.albumImg)
-        */
+        with(holder){
+
+            //binding.cbFavorite.isChecked = store.isFavorite
+
+            Glide.with(mContext)
+                .load(album.cover)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .centerCrop()
+                .into(viewDataBinding.albumImg)
+        }
     }
     override fun getItemCount(): Int {
         return albums.size
@@ -78,4 +83,8 @@ class AlbumsAdapter : RecyclerView.Adapter<AlbumsAdapter.AlbumViewHolder>(){
 
         }
     */
+
 }
+
+
+
