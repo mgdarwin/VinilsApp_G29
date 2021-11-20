@@ -21,8 +21,8 @@
         android:label="Albums"
         tools:layout="@layout/album_list_fragment" >
         <action
-            android:id="@+id/action_albumFragment_to_commentFragment"
-            app:destination="@id/commentFragment" />
+            android:id="@+id/action_albumListFragment_to_albumDetailFragment"
+            app:destination="@id/albumDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/commentFragment"
@@ -32,5 +32,17 @@
         <argument
             android:name="albumId"
             app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/albumDetailFragment"
+        android:name="com.example.vinyls_jetpack_application.ui.AlbumDetailFragment"
+        android:label="album_detail_item"
+        tools:layout="@layout/album_detail_item" >
+        <argument
+            android:name="albumId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_albumDetailFragment_to_commentFragment2"
+            app:destination="@id/commentFragment" />
     </fragment>
 </navigation>

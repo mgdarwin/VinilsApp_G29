@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/layout/album_fragment.xml" value="0.3375" />
         <entry key="app/src/main/res/layout/album_item.xml" value="0.2490740740740741" />
         <entry key="app/src/main/res/layout/album_list_fragment.xml" value="0.43020833333333336" />
+        <entry key="app/src/main/res/layout/album_list_item.xml" value="0.43020833333333336" />
         <entry key="app/src/main/res/layout/album_principal.xml" value="0.2735562310030395" />
         <entry key="app/src/main/res/layout/collector_fragment.xml" value="0.2490740740740741" />
         <entry key="app/src/main/res/layout/collector_item.xml" value="0.3375" />

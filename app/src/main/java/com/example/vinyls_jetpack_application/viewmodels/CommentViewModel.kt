@@ -4,8 +4,6 @@ import android.app.Application
 import android.util.Log
 import androidx.lifecycle.*
 import com.example.vinyls_jetpack_application.models.Comment
-import com.example.vinyls_jetpack_application.network.NetworkServiceAdapter
-import com.example.vinyls_jetpack_application.repositories.CollectorsRepository
 import com.example.vinyls_jetpack_application.repositories.CommentsRepository
 
 class CommentViewModel(application: Application, albumId: Int) :  AndroidViewModel(application) {

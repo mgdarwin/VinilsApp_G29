@@ -1,13 +1,17 @@
 package com.example.vinyls_jetpack_application.viewmodels
 
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.*
 import com.example.vinyls_jetpack_application.models.Album
 import com.example.vinyls_jetpack_application.repositories.AlbumRepository
 
-class AlbumViewModel(application: Application) :  AndroidViewModel(application) {
 
-    private val albumsRepository = AlbumRepository(application)
+/**
+
+class AlbumDetailViewModel(application: Application, albumId: Int) :  AndroidViewModel(application) {
+
+    private val albumRepository = AlbumRepository(application)
 
     private val _albums = MutableLiveData<List<Album>>()
 
@@ -24,19 +28,19 @@ class AlbumViewModel(application: Application) :  AndroidViewModel(application) 
     val isNetworkErrorShown: LiveData<Boolean>
         get() = _isNetworkErrorShown
 
+    val id:Int = albumId
+
     init {
         refreshDataFromNetwork()
     }
 
-
-    // se encarga de consultar activamente la información de los modelos con el manejador de
-    // peticiones de red y actualizar los LiveData respectivos.
     private fun refreshDataFromNetwork() {
-        albumsRepository.refreshData({
+        albumRepository.refreshData({
             _albums.postValue(it)
             _eventNetworkError.value = false
             _isNetworkErrorShown.value = false
         },{
+            Log.d("Error", it.toString())
             _eventNetworkError.value = true
         })
     }
@@ -45,14 +49,16 @@ class AlbumViewModel(application: Application) :  AndroidViewModel(application) 
         _isNetworkErrorShown.value = true
     }
 
-    // Factory - la cual extiende de ViewModelProvider.Factory y se encarga de crear la instancia del ViewModel.
-    class Factory(val app: Application) : ViewModelProvider.Factory {
+    class Factory(val app: Application, val albumId: Int) : ViewModelProvider.Factory {
         override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-            if (modelClass.isAssignableFrom(AlbumViewModel::class.java)) {
+            if (modelClass.isAssignableFrom(AlbumDetailViewModel::class.java)) {
                 @Suppress("UNCHECKED_CAST")
-                return AlbumViewModel(app) as T
+                return AlbumDetailViewModel(app, albumId) as T
             }
             throw IllegalArgumentException("Unable to construct viewmodel")
         }
     }
 }
+
+
+ */
