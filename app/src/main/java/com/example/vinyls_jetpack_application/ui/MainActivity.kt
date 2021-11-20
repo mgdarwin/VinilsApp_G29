@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //-----
-        val albumButton: Button = findViewById(R.id.album_button)
-        albumButton.setOnClickListener { botonClick() }
+        //val albumButton: Button = findViewById(R.id.album_button)
+        //albumButton.setOnClickListener { botonClick() }
         //-----
 
 

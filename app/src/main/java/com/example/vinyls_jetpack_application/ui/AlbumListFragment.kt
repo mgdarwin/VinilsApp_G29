@@ -1,5 +1,6 @@
 package com.example.vinyls_jetpack_application.ui
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +16,8 @@ import com.example.vinyls_jetpack_application.databinding.AlbumListFragmentBindi
 import com.example.vinyls_jetpack_application.models.Album
 import com.example.vinyls_jetpack_application.ui.adapters.AlbumsAdapter
 import com.example.vinyls_jetpack_application.viewmodels.AlbumViewModel
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -25,6 +28,7 @@ class AlbumListFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var viewModel: AlbumViewModel
     private var viewModelAdapter: AlbumsAdapter? = null
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -57,7 +61,9 @@ class AlbumListFragment : Fragment() {
         })
         viewModel.eventNetworkError.observe(viewLifecycleOwner, Observer<Boolean> { isNetworkError ->
             if (isNetworkError) onNetworkError()
-        })
+        }
+        )
+
     }
     override fun onDestroyView() {
         super.onDestroyView()
