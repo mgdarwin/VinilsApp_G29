@@ -4,13 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.3536458333333333" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3234375" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.38385416666666666" />
+        <entry key="app/src/main/res/layout/album_detail_fragment.xml" value="0.21784420289855072" />
+        <entry key="app/src/main/res/layout/album_detail_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/album_fragment.xml" value="0.3375" />
-        <entry key="app/src/main/res/layout/album_item.xml" value="0.3234375" />
-        <entry key="app/src/main/res/layout/collector_fragment.xml" value="0.3375" />
+        <entry key="app/src/main/res/layout/album_item.xml" value="0.2490740740740741" />
+        <entry key="app/src/main/res/layout/album_list_fragment.xml" value="0.43020833333333336" />
+        <entry key="app/src/main/res/layout/album_principal.xml" value="0.2735562310030395" />
+        <entry key="app/src/main/res/layout/collector_fragment.xml" value="0.2490740740740741" />
         <entry key="app/src/main/res/layout/collector_item.xml" value="0.3375" />
         <entry key="app/src/main/res/layout/comment_fragment.xml" value="0.3375" />
         <entry key="app/src/main/res/layout/comment_item.xml" value="0.3375" />
+        <entry key="app/src/main/res/layout/fragment_album_detail.xml" value="0.38385416666666666" />
         <entry key="app/src/main/res/layout/fragment_album_fragment.xml" value="0.3234375" />
         <entry key="app/src/main/res/layout/item_album.xml" value="0.3375" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.3375" />

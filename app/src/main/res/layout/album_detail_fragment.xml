@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.AlbumFragment"
+    tools:context=".ui.AlbumDetailFragment"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp">
 
@@ -13,10 +13,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/albumsRv"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/album_item"/>
+        android:orientation="vertical">
+        tools:listitem="@layout/album_list_detail_item"/>
+    </LinearLayout>
+
 
 </FrameLayout>
+
+
+<androidx.recyclerview.widget.RecyclerView
+android:id="@+id/albumsRv"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:listitem="@layout/album_list_item"/>

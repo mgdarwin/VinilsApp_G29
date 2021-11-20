@@ -46,6 +46,7 @@ class AlbumViewModel(application: Application) :  AndroidViewModel(application) 
     fun onNetworkErrorShown() {
         _isNetworkErrorShown.value = true
     }
+
     // Factory - la cual extiende de ViewModelProvider.Factory y se encarga de crear la instancia del ViewModel.
     class Factory(val app: Application) : ViewModelProvider.Factory {
         override fun <T : ViewModel?> create(modelClass: Class<T>): T {

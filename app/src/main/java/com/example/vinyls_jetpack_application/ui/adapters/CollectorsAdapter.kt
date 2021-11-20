@@ -19,7 +19,9 @@ class CollectorsAdapter : RecyclerView.Adapter<CollectorsAdapter.CollectorViewHo
             notifyDataSetChanged()
         }
 
+    // Create new views (invoked by the layout manager)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CollectorViewHolder {
+        // Create a new view, which defines the UI of the list item
         val withDataBinding: CollectorItemBinding = DataBindingUtil.inflate(
             LayoutInflater.from(parent.context),
             CollectorViewHolder.LAYOUT,
@@ -28,6 +30,7 @@ class CollectorsAdapter : RecyclerView.Adapter<CollectorsAdapter.CollectorViewHo
         return CollectorViewHolder(withDataBinding)
     }
 
+    // Replace the contents of a view (invoked by the layout manager)
     override fun onBindViewHolder(holder: CollectorViewHolder, position: Int) {
         holder.viewDataBinding.also {
             it.collector = collectors[position]
@@ -39,13 +42,13 @@ class CollectorsAdapter : RecyclerView.Adapter<CollectorsAdapter.CollectorViewHo
         }
     }
 
+    // Return the size of your dataset (invoked by the layout manager)
     override fun getItemCount(): Int {
         return collectors.size
     }
 
 
-    class CollectorViewHolder(val viewDataBinding: CollectorItemBinding) :
-        RecyclerView.ViewHolder(viewDataBinding.root) {
+    class CollectorViewHolder(val viewDataBinding: CollectorItemBinding) : RecyclerView.ViewHolder(viewDataBinding.root) {
         companion object {
             @LayoutRes
             val LAYOUT = R.layout.collector_item

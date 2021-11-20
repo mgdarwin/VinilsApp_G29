@@ -20,15 +20,14 @@ import com.example.vinyls_jetpack_application.viewmodels.CollectorViewModel
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
 class CollectorFragment : Fragment() {
-    private var _binding: CollectorFragmentBinding? = null
+    private var _binding: CollectorFragmentBinding? = null   //https://developer.android.com/codelabs/basic-android-kotlin-training-fragments-navigation-component#4
     private val binding get() = _binding!!
     private lateinit var recyclerView: RecyclerView
     private lateinit var viewModel: CollectorViewModel
     private var viewModelAdapter: CollectorsAdapter? = null
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         _binding = CollectorFragmentBinding.inflate(inflater, container, false)
         val view = binding.root
