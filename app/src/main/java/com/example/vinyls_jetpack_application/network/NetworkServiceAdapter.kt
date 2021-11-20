@@ -13,6 +13,7 @@ import com.example.vinyls_jetpack_application.models.Album
 import com.example.vinyls_jetpack_application.models.Artist
 import com.example.vinyls_jetpack_application.models.Collector
 import com.example.vinyls_jetpack_application.models.Comment
+import com.example.vinyls_jetpack_application.models.Musician
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -73,6 +74,21 @@ class NetworkServiceAdapter constructor(context: Context) {
                     item = resp.getJSONObject(i)
                     Log.d("Response", item.toString())
                     list.add(i, Comment(albumId = albumId, rating = item.getInt("rating").toString(), description = item.getString("description")))
+                }
+                onComplete(list)
+            },
+            {
+                onError(it)
+            }))
+    }
+    fun getMusicians(onComplete:(resp:List<Musician>)->Unit, onError: (error:VolleyError)->Unit){
+        requestQueue.add(getRequest("musicians",
+            { response ->
+                val resp = JSONArray(response)
+                val list = mutableListOf<Musician>()
+                for (i in 0 until resp.length()) {
+                    val item = resp.getJSONObject(i)
+                    list.add(i, Musician(musicianId = item.getInt("id"),name = item.getString("name"), image = item.getString("image"), description = item.getString("description"), birthDate = item.getString("birthDate")))
                 }
                 onComplete(list)
             },
