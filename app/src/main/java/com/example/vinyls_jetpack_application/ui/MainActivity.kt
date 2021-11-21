@@ -34,8 +34,8 @@ class MainActivity : AppCompatActivity() {
         //albumButton.setOnClickListener { botonClick() }
         //-----
 
-        val artistButton : Button = binding.buttonArtist
-        artistButton.setOnClickListener { botonClick()}
+        //val artistButton : Button = binding.buttonArtist
+        //artistButton.setOnClickListener { botonClick()}
 
 
         // Get the navigation host fragment from this Activity

@@ -36,7 +36,7 @@ class CollectorsAdapter : RecyclerView.Adapter<CollectorsAdapter.CollectorViewHo
             it.collector = collectors[position]
         }
         holder.viewDataBinding.root.setOnClickListener {
-            val action = CollectorFragmentDirections.actionCollectorFragmentToAlbumFragment()
+            val action = CollectorFragmentDirections.actionCollectorFragmentToCommentFragment(collectors[position].collectorId)
             // Navigate using that action
             holder.viewDataBinding.root.findNavController().navigate(action)
         }

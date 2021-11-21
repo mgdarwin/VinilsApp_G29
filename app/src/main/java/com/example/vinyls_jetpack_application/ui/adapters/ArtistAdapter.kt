@@ -39,6 +39,7 @@ class ArtistAdapter : RecyclerView.Adapter<ArtistAdapter.ArtistViewHolder>(){
             ArtistViewHolder.LAYOUT,
             parent,
             false)
+        mContext = parent.context
         return ArtistViewHolder(withDataBinding)
     }
 
