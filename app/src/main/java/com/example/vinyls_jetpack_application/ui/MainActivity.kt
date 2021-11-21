@@ -12,6 +12,10 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
+import androidx.fragment.app.commit
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.vinyls_jetpack_application.R
@@ -30,6 +34,9 @@ class MainActivity : AppCompatActivity() {
         //albumButton.setOnClickListener { botonClick() }
         //-----
 
+        val artistButton : Button = binding.buttonArtist
+        artistButton.setOnClickListener { botonClick()}
+
 
         // Get the navigation host fragment from this Activity
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
@@ -45,6 +52,12 @@ class MainActivity : AppCompatActivity() {
     private fun botonClick(){
         Toast.makeText(this, "button clicked",
             Toast.LENGTH_SHORT).show()
+        changeFragment(ArtistListFragment())
+    }
+
+    private fun changeFragment(fragment:Fragment){
+        //var details = supportFragmentManager?.findFragmentById(R.id.albumListFragment) as? DetailsFragment
+        supportFragmentManager.beginTransaction().replace(R.id.albumListFragment,fragment).commit()
     }
 
 

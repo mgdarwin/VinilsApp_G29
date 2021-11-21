@@ -51,6 +51,8 @@
     <string name="txt_no_album_detail">Album without details</string>
     <string name="title_album_details">Album Detail</string>
     <string name="artists">Artists</string>
+    <string name="albums">Albums</string>
+    <string name="Collectors">Collectors</string>
 </resources>
 
 
