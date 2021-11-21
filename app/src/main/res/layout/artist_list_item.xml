@@ -35,7 +35,7 @@
                     android:id="@+id/artistImg"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:contentDescription="@string/description_img_photo"
+                    android:contentDescription="@string/description_artist_img_photo"
                     android:background="@android:color/darker_gray"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"

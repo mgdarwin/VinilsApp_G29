@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/albumListFragment">
+    app:startDestination="@id/artistListFragment">
 
     <!-- app:startDestination="@id/albumListFragment"> -->
 
@@ -50,5 +50,9 @@
     <fragment
         android:id="@+id/artistListFragment"
         android:name="com.example.vinyls_jetpack_application.ui.ArtistListFragment"
-        android:label="ArtistListFragment" />
+        android:label="ArtistListFragment" >
+        <action
+            android:id="@+id/action_artistListFragment_to_albumListFragment"
+            app:destination="@id/albumListFragment" />
+    </fragment>
 </navigation>

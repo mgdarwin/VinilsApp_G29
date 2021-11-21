@@ -14,6 +14,7 @@ import com.example.vinyls_jetpack_application.R
 import com.example.vinyls_jetpack_application.databinding.ArtistListItemBinding
 import com.example.vinyls_jetpack_application.models.Artist
 import com.example.vinyls_jetpack_application.ui.AlbumListFragmentDirections
+import com.example.vinyls_jetpack_application.ui.MainActivity
 
 class ArtistAdapter : RecyclerView.Adapter<ArtistAdapter.ArtistViewHolder>(){
 
@@ -46,15 +47,27 @@ class ArtistAdapter : RecyclerView.Adapter<ArtistAdapter.ArtistViewHolder>(){
         holder.viewDataBinding.also {
             it.artist = artists[position]
         }
-        /**
+
         holder.viewDataBinding.root.setOnClickListener {
-            val action = AlbumListFragmentDirections.actionAlbumListFragmentToAlbumDetailFragment(albums[position].albumId)
+            val action = AlbumListFragmentDirections.actionAlbumListFragmentToAlbumDetailFragment(artists[position].artistId)
             // Navigate using that action
             holder.viewDataBinding.root.findNavController().navigate(action)
             println(action)
         }
-        */
+
+        with(holder) {
+            Glide.with(mContext)
+                .load(artist.image)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .centerCrop()
+                .into(viewDataBinding.artistImg)
+        }
+
+
     }
+
+
+
 
     override fun getItemCount(): Int {
         return artists.size
