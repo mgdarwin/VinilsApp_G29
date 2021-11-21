@@ -5,6 +5,8 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/albumListFragment">
 
+    <!-- app:startDestination="@id/albumListFragment"> -->
+
     <!-- app:startDestination="@id/collectorFragment"> -->
     <fragment
         android:id="@+id/collectorFragment"
@@ -45,4 +47,8 @@
             android:id="@+id/action_albumDetailFragment_to_commentFragment2"
             app:destination="@id/commentFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/artistListFragment"
+        android:name="com.example.vinyls_jetpack_application.ui.ArtistListFragment"
+        android:label="ArtistListFragment" />
 </navigation>
